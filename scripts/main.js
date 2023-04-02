@@ -21,7 +21,7 @@ function collectBox (player, Box)
     scoreText.setText('Score: ' + score);
     boxScoreText.setText('Box Collected: ' + boxCollected);
 
-    if (boxCollected % 5 === 0) {
+    if (boxCollected % 2 === 0) {
         player.setScale(player.scaleX + 0.1, player.scaleY + 0.1);
     }
     if (box.countActive(true) === 0)
@@ -32,6 +32,8 @@ function collectBox (player, Box)
 
         var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
         var bomb = bombs.create(x, 16, 'bomb');
+
+
         bomb.setBounce(1);
         bomb.setCollideWorldBounds(true);
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);

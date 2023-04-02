@@ -1,14 +1,21 @@
 var player;
 var box;
 var bombs;
+
+
 var platforms;
 var cursors;
-var score = 0;
-var scoreText;
+
 var boxCollected = 0;
 var boxScoreText;
-var colors = [0xff0000, 0xffa500, 0xffff00, 0x008000, 0x0000ff, 0x4b0082, 0xee82ee];
+
+
+var colors = [0xff0000, 0x424dae, 0xe82a15, 0xf80efc, 0x6bf2db, 0x4b0082, 0xee82ee];
 var currentColorIndex = 0;
+
+
+var score = 0;
+var scoreText;
 
 class gamelvl extends Phaser.Scene{
     constructor(){
